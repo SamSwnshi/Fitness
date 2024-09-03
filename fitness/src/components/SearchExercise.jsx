@@ -1,11 +1,26 @@
 import React, { useState } from "react";
+import { exerciseOption, data } from "../data";
 
 const SearchExercise = () => {
   const [search, setSearch] = useState("");
+  const [exercises,setExercises] = useState([])
 
   const handleSearch = async () => {
     if (search) {
-      // const gymData = await fetchData
+      const gymData = await data(
+        "https://exercisedb.p.rapidapi.com/exercises",
+        exerciseOption
+      );
+      const searchExercise = gymData.filter(
+        (exercise) =>
+          exercise.name.toLowerCase().include(search) ||
+          exercise.target.toLowerCase().include(search) ||
+          exercise.equipment.toLowerCase().include(search) ||
+          exercise.bodyPart.toLowerCase().include(search)
+      );
+
+      setSearch("")
+      setExercises(searchExercise)
     }
   };
   return (
