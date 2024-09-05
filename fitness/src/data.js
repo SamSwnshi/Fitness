@@ -7,9 +7,18 @@ export const exerciseOption = {
   },
 };
 
-export const fetchData  = async (url, options) => {
-    const res = await fetch(url, options);
-    const resultData = await res.json();
-  
-    return resultData;
+export const youtubeOptions = {
+  method: "GET",
+
+  headers: {
+    "x-rapidapi-key": "c7c46534camsh51d7de57da8e200p19a316jsnf77cb5e31fdb",
+    "x-rapidapi-host": "youtube-search-and-download.p.rapidapi.com",
+  },
+};
+
+export const fetchData = async (url, options) => {
+  const res = await fetch(url, options);
+  const resultData = await res.json();
+
+  return resultData;
 };

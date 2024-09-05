@@ -3,17 +3,20 @@ import { exerciseOption, fetchData } from '../data';
 import { Link } from 'react-router-dom';
 
 const Exercises = ({ exercises, bodysPart, setExercises }) => {
-  console.log(exercises)
   useEffect(() => {
     const fetchExeData = async () => {
-      let exerciseData = [];
+      try {
+        let exerciseData = [];
 
-      if (bodysPart === "all") {
-        exerciseData = await fetchData("https://exercisedb.p.rapidapi.com/exercises", exerciseOption);
-      } else {
-        exerciseData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodysPart}`, exerciseOption);
+        if (bodysPart === "all") {
+          exerciseData = await fetchData("https://exercisedb.p.rapidapi.com/exercises", exerciseOption);
+        } else {
+          exerciseData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodysPart}`, exerciseOption);
+        }
+        setExercises(exerciseData);
+      } catch (error) {
+        console.error("Failed to fetch exercises:", error);
       }
-      setExercises(exerciseData);
     };
     fetchExeData();
   }, [bodysPart, setExercises]);
