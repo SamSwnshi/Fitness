@@ -4,7 +4,7 @@ const Details = ({ exerciseDetails }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetails;
 
   return (
-    <div className="flex h-screen  items-center justify-center gap-5 border-2 ">
+    <div className="flex h-screen  items-center justify-center gap-5 border-2 bg-[#0e0e10] ">
       <div className="flex items-center justify-center w-2/5 h-3/4 ">
         <img src={gifUrl} alt={name} className="bg-transparent h-full w-full rounded-lg" />
       </div>

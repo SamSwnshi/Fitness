@@ -4,7 +4,7 @@ import ScrollBar from "./ScrollBar";
 const SimilarExercises = ({ equipmentExercises, targetMuscleExercises }) => {
   return (
     <div>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden bg-[#0e0e10]">
         <h2 className="text-xl font-bold mb-4">Exercises with Similar Equipment</h2>
         <ScrollBar data={equipmentExercises.map((exercise, index) => (
           <div key={index} className="exercise-card overflow-hidden p-2 border rounded-lg">

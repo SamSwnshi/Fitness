@@ -1,11 +1,15 @@
 import React from 'react';
 
-const ScrollBar = ({ data }) => {
+const ScrollBar = ({ data, setBodysPart }) => {
   return (
-    <div className="flex overflow-x-scroll scrollbar-hide gap-2">
+    <div className="w-full h-4/5 flex flex-wrap gap-12 items-center justify-center">
       {data?.map((item, index) => (
-        <div key={index} className="flex-shrink-0">
-          {item}
+        <div
+          key={index}
+          className="w-36 h-24 flex border-2 p-5 justify-evenly items-center rounded-lg cursor-pointer"
+          onClick={() => setBodysPart(item)} // Update bodysPart on click
+        >
+          {item.toUpperCase()}
         </div>
       ))}
     </div>

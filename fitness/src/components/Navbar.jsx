@@ -1,18 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo-whites.png"
 
 const Navbar = () => {
   return (
-    <div className="w-full p-4 sticky top-0 flex bg-transparent justify-between items-center  ">
-      <div>
+    <div className="w-full p-4 fixed top-0 flex bg-transparent justify-between items-center tracking-widest  ">
+      <div >
+        <Link to ="/">
         <img
-          src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={logo}
           alt="Logo"
-          className="w-18 h-12 rounded-full"
+          className="w-18 h-10 "
         />
+        </Link>
       </div>
-      <div className="flex w-1/3 justify-evenly items-center  border-gray-200 rounded-full px-4">
-        <Link to="/home" className="hover:text-blue-500">Home</Link>
+      <div className="flex w-1/3 justify-between items-center  border-gray-200 px-4">
+        <Link to="/" className="hover:text-blue-500">Home</Link>
         <Link to="/exercises" className="hover:text-blue-500">Exercises</Link>
         <Link to="/login" className="hover:text-blue-500">Login</Link>
         <Link to="/signup" className="hover:text-blue-500">SignUp</Link>

@@ -3,7 +3,7 @@ import React from "react";
 const ExerciseVideos = ({ exerciseVideos, name }) => {
   console.log(exerciseVideos);
   return (
-    <div>
+    <div className="bg-[#0e0e10]">
       <div>
         <h1>
           Watch <span>{name.toUpperCase()} Exercise Videos</span>
