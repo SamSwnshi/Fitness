@@ -1,2 +1,25 @@
-.app{
-}
+
+::-webkit-scrollbar {
+    width: 3px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    border-radius: 10px; /* Optional: round the edges */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0e0e10; /* Gradient effect for thumb */
+    /* Round the scrollbar thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    /* background: linear-gradient(180deg, #555, #333); */
+    cursor: pointer; /* Change cursor to indicate scrolling */
+  }
+  
+  /* Optional: Customize scrollbar corner for scrollable containers */
+  ::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+  }
+  

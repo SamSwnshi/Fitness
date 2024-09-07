@@ -4,7 +4,7 @@ import logo from "../assets/logo-whites.png"
 
 const Navbar = () => {
   return (
-    <div className="w-full p-4 fixed top-0 flex bg-transparent justify-between items-center tracking-widest  ">
+    <div className="w-full p-4  flex bg-transparent justify-between items-center tracking-widest  ">
       <div >
         <Link to ="/">
         <img
