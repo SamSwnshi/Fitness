@@ -64,23 +64,23 @@ const Exercises = () => {
   };
 
   return (
-    <div className="p-20 flex flex-col items-center bg-[#0e0e10]">
-      <div className="flex flex-col items-center gap-2 tracking-wider">
-        <h1 className="text-3xl font-medium">Find the Perfect Exercise for You</h1>
+    <div className="p-20 h-full flex flex-col items-center justify-center bg-[#ECE3D4] text-[#734523]  tracking-widest">
+      <div className="flex flex-col items-center gap-2 ">
+        <h1 className="text-3xl font-medium text-[#372A15]">Find the Perfect Exercise for You</h1>
         <p className="text-lg" >
           Search our database of exercises and filter by muscle group and find the perfect workout for your needs.
         </p>
       </div>
 
-      <div className="flex gap-5 mt-3 mb-6 w-2/5">
+      <div className="flex gap-5 mt-3 mb-6 w-4/5  justify-center">
         <input
           type="text"
           placeholder="Search Exercise"
-          className="border-2 text-black rounded-md w-4/5 p-2"
+          className="border-2 text-black rounded-md w-3/5 p-2"
           value={search}
           onChange={handleSearchInputChange}
         />
-        <button className="border-2 w-1/5 rounded-md" onClick={handleSearch}>
+        <button className=" w-36 rounded-md bg-[#734523] text-[#ECE3D4]" onClick={handleSearch}>
           Search
         </button>
       </div>

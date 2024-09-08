@@ -7,7 +7,6 @@ import Signup from "./components/Signup";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Exercises from "./components/Exercises";
-import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import PreLoader from "./components/PreLoader";
 import gsap from "gsap";
@@ -30,7 +29,7 @@ function App() {
       ease: "power2.inOut",
     }).to(wrapperRef.current, {
       y: "-100%", // Move the preloader off the screen
-      duration: 3,
+      duration: 2,
       ease: "power1.inOut",
       opacity: 0,
       delay: 0.1, // Delay before removing the preloader
@@ -40,7 +39,7 @@ function App() {
     <div className="app font-suse ">
       <PreLoader wrapperRef={wrapperRef} progressRef={progressRef} />
       <BrowserRouter>
-        <div className="app bg-cover h-screen bg-[#0e0e10] text-[#EFF0F3] ">
+        <div className="app bg-cover h-screen ">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -51,7 +50,7 @@ function App() {
             <Route path="/exercises" element={<Exercises />} />
             <Route path="/exercises/:id" element={<ExercisesDetails />} />
           </Routes>
-          <Footer />
+          
         </div>
       </BrowserRouter>
     </div>

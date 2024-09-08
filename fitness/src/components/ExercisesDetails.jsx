@@ -71,7 +71,7 @@ const ExercisesDetails = () => {
         targetMuscleExercises={targetMuscleExercises}
         equipmentExercises={equipmentExercises}
       />
-      <Footer/>
+    <Footer/>
     </div>
   );
 };

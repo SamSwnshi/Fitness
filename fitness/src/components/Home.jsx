@@ -4,13 +4,15 @@ import HeroSection from "./HeroSection";
 import About from "./About";
 import OurServices from "./OurServices";
 import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 const Home = () => {
   return (
-    <div className="app bg-[#0e0e10]">
+    <div className="app ">
       <HeroSection />
       <About />
       <OurServices/>
       <ContactUs/>
+      <Footer/>
     </div>
   );
 };

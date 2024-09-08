@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link ,useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -20,18 +20,18 @@ const Signup = () => {
       password,
     };
 
-    localStorage.setItem("user",JSON.stringify(userData))
-    alert('Account created successfully!');
+    localStorage.setItem("user", JSON.stringify(userData));
+    alert("Account created successfully!");
 
-    setEmail("")
-    setPassword("")
-    setConfirmPassword("")
-    setUsername("")
-    navigate('/login')
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
+    setUsername("");
+    navigate("/login");
   };
   return (
-    <div className="flex justify-center items-center h-screen ">
-      <div className="w-96 border-2 p-8 shadow-lg rounded-lg">
+    <div className="flex h-screen justify-center items-center  bg-[#D4C3AA]  ">
+      <div className="w-96 h-4/5 border-2 p-8 bg-[#ECE3D4] shadow-lg rounded-lg">
         <h1 className="text-2xl font-bold mb-3">Sign Up</h1>
         <p className="mb-4">Create your account to get started.</p>
         <form onSubmit={handleSubmit}>
@@ -43,7 +43,7 @@ const Signup = () => {
               type="text"
               id="name"
               value={username}
-              onChange={(e)=>setUsername(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
               placeholder="Enter Name"
               required
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -60,7 +60,7 @@ const Signup = () => {
               required
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={email}
-              onChange={(e)=>setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-4">
@@ -72,7 +72,7 @@ const Signup = () => {
               id="password"
               placeholder="Enter Password"
               value={password}
-              onChange={(e)=>setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -85,7 +85,7 @@ const Signup = () => {
               type="password"
               id="confirm-password"
               value={confirmPassword}
-              onChange={(e)=>setConfirmPassword(e.target.value)}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Confirm Password"
               required
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
