@@ -1,15 +1,17 @@
-
+html {
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
-    width: 5px; /* Width of the scrollbar */
+    width: 1px; /* Width of the scrollbar */
   }
   
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Track color */
+    background: #ECE3D4; /* Track color */
     border-radius: 10px; /* Optional: round the edges */
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #0e0e10; /* Gradient effect for thumb */
+    background: "transparent"; /* Gradient effect for thumb */
     /* Round the scrollbar thumb */
   }
   
@@ -23,3 +25,23 @@
     background: #f1f1f1;
   }
   
+/* scrollbar for exerxise page */
+
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+    border-radius: 5px;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scroll thumb */
+    border-radius: 5px;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scroll thumb on hover */
+  }

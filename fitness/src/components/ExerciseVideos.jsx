@@ -1,27 +1,35 @@
 import React from "react";
 
 const ExerciseVideos = ({ exerciseVideos, name }) => {
-  console.log(exerciseVideos);
   return (
-    <div className="bg-[#0e0e10]">
-      <div>
-        <h1>
-          Watch <span>{name.toUpperCase()} Exercise Videos</span>
+    <div className="p-4 min-h-full bg-[#D4C3AA] text-[#6F5B45] tracking-widest">
+      <div className="text-center mb-4">
+        <h1 className="text-2xl md:text-3xl">
+          Watch<br/> <span className="font-bold text-[#372A15]">{name.toUpperCase()}</span> <br/> Exercise Videos
         </h1>
       </div>
-      <div className="h-1/2 flex justify-around items-center">
-        <>
-          {exerciseVideos?.slice(0, 3).map((items, index) => (
-            <div key={index}>
-             
-              <a href={`https://www.youtube.com/watch?v=${items.video.videoId}`} target="_blank" rel="noopener noreferrer">
-                <img src={items.video.thumbnails[0].url} alt="Exercise video thumbnail" />
-              </a>
-              <p className="truncate">{items.video.channelName}</p>
-              <p className="truncate">{items.video.title}</p>
-            </div>
-          ))}
-        </>
+      <div className="flex flex-wrap justify-center gap-4">
+        {exerciseVideos?.slice(0, 3).map((items, index) => (
+          <div
+            key={index}
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 flex flex-col items-center"
+          >
+            <a
+              href={`https://www.youtube.com/watch?v=${items.video.videoId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <img
+                src={items.video.thumbnails[0].url}
+                alt={items.video.title}
+                className="w-full h-auto rounded-lg"
+              />
+            </a>
+            <p className="truncate mt-2 text-center">{items.video.channelName}</p>
+            <p className="truncate text-center">{items.video.title}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

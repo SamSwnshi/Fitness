@@ -4,7 +4,6 @@ import { exerciseOption, fetchData, youtubeOptions } from "../data";
 import Details from "./Details";
 import ExerciseVideos from "./ExerciseVideos";
 import SimilarExercises from "./SimilarExercises";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const ExercisesDetails = () => {
@@ -56,12 +55,16 @@ const ExercisesDetails = () => {
     fetchExerciseData();
   }, [id]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return (
+    <div className="flex items-center justify-center min-h-screen bg-[#ECE3D4]">
+      <p className="text-3xl font-bold text-[#734523]">Loading...</p>
+    </div>
+  );
+
+  if (error) return <p className="text-center text-red-600">{error}</p>;
 
   return (
-    <div>
-      <Navbar />
+    <div className="min-h-screen bg-[#ECE3D4] text-[#734523]">
       <Details exerciseDetails={exerciseDetails} />
       <ExerciseVideos
         exerciseVideos={exerciseVideos}
@@ -71,7 +74,7 @@ const ExercisesDetails = () => {
         targetMuscleExercises={targetMuscleExercises}
         equipmentExercises={equipmentExercises}
       />
-    <Footer/>
+      <Footer />
     </div>
   );
 };

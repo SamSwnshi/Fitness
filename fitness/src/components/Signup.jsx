@@ -30,7 +30,7 @@ const Signup = () => {
     navigate("/login");
   };
   return (
-    <div className="flex h-screen justify-center items-center  bg-[#D4C3AA]  ">
+    <div className="flex h-screen justify-center items-center  bg-[#D4C3AA] tracking-wider ">
       <div className="w-96 h-4/5 border-2 p-8 bg-[#ECE3D4] shadow-lg rounded-lg">
         <h1 className="text-2xl font-bold mb-3">Sign Up</h1>
         <p className="mb-4">Create your account to get started.</p>
@@ -46,7 +46,7 @@ const Signup = () => {
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Enter Name"
               required
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 "
             />
           </div>
           <div className="mb-4">
@@ -58,7 +58,7 @@ const Signup = () => {
               id="email"
               placeholder="Enter Email"
               required
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 "
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -74,7 +74,7 @@ const Signup = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 "
             />
           </div>
           <div className="mb-6">
@@ -88,19 +88,19 @@ const Signup = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
               placeholder="Confirm Password"
               required
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 "
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300 mb-2"
+            className="w-full  py-2 rounded-lg bg-[#6F5B45] text-[#ECE3D4] hover:bg-[#B89D75] transition duration-300 mb-2"
           >
             Sign Up
           </button>
         </form>
         <p>
           Already have an account?{" "}
-          <Link to="/login" className="text-blue-500 hover:underline">
+          <Link to="/login" className="text-[#372A15] hover:underline">
             Log In
           </Link>
         </p>

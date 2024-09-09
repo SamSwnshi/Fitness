@@ -1,17 +1,20 @@
 import React from 'react';
+import '../App.css'; // Import the custom scrollbar styles
 
 const ScrollBar = ({ data, setBodysPart }) => {
   return (
-    <div className="w-full h-4/5 flex flex-wrap gap-12 items-center justify-center">
-      {data?.map((item, index) => (
-        <div
-          key={index}
-          className="w-36 h-24 flex border-2 p-5 justify-evenly items-center rounded-lg cursor-pointer"
-          onClick={() => setBodysPart(item)} // Update bodysPart on click
-        >
-          {item.toUpperCase()}
-        </div>
-      ))}
+    <div className="w-full h-62 flex overflow-x-auto gap-4 p-4 scrollbar-custom">
+      <div className="flex items-center gap-5">
+        {data?.map((item, index) => (
+          <div
+            key={index}
+            className="w-56 h-52 flex bg-white p-5 justify-evenly items-center rounded-lg cursor-pointer shrink-0"
+            onClick={() => setBodysPart(item)} // Update bodysPart on click
+          >
+            {item}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
