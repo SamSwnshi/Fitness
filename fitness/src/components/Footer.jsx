@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,23 +28,23 @@ const Footer = () => {
         {/* Right Section - Social Media Links */}
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 text-center md:text-left">
           <a
-            href="https://facebook.com"
+            href="https://www.linkedin.com/in/sameer-suryawanshi/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#372A15]"
           >
-            Facebook
+            LinkedIn
           </a>
           <a
-            href="https://twitter.com"
+            href="https://github.com/SamSwnshi"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#372A15]"
           >
-            Twitter
+            GitHub
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/_sameer_suryawanshi_/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#372A15]"
